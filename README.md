@@ -1,0 +1,1 @@
+# Animate Addon Installer
