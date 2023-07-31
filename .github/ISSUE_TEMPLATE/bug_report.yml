@@ -1,14 +1,16 @@
 name: Bug Report
 description: File a bug report
 title: "[Bug]: "
-labels: ["bug"]
+labels: ["Bug"]
 assignees:
   - DeMineArchiver
 body:
   - type: markdown
     attributes:
       value: |
-        a
+        Thank you for taking your time to open an issue!
+
+        Make sure that you've read our [**Contributing Guidelines**](https://github.com/animate-addons/installer/blob/main/CONTRIBUTING.md)
   - type: textarea
     attributes:
       label: Describe the Bug
@@ -32,6 +34,16 @@ body:
       placeholder: e.g. Windows 11 22H2 build 22621.2070
     validations:
       required: true
+  - type: dropdown
+    attributes:
+      label: Affected Part
+      description: Which part of the installer you suppose are affected?
+      multiple: true
+      options:
+        - "App (backend)"
+        - "GUI (frontend)"
+    validations:
+      required: false
   - type: checkboxes
     attributes:
       label: Code of Conduct
