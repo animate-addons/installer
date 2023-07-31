@@ -35,7 +35,6 @@ body:
       placeholder: e.g. Windows 11 22H2 build 22621.2070
     validations:
       required: true
-  - type: 
   - type: dropdown
     attributes:
       label: Affected Part
