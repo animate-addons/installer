@@ -1,0 +1,25 @@
+name: Bug Report
+description: File a bug report
+title: "[Bug]: "
+labels: ["bug"]
+assignees:
+  - DeMineArchiver
+body:
+  - type: markdown
+    attributes:
+      value: |
+        a
+  - type: input
+    attributes:
+      label: Your Windows version
+      description: Please provide your Windows version, along with the build number
+      placeholder: e.g. Windows 11 22H2 build 22621.2070
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [**Code of Conduct**](https://github.com/animate-addons/installer/blob/main/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
