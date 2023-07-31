@@ -1,7 +1,8 @@
 name: Bug Report
 description: File a bug report
 title: "[Bug]: "
-labels: ["Bug"]
+labels:
+  - Bug
 assignees:
   - DeMineArchiver
 body:
@@ -34,14 +35,15 @@ body:
       placeholder: e.g. Windows 11 22H2 build 22621.2070
     validations:
       required: true
+  - type: 
   - type: dropdown
     attributes:
       label: Affected Part
-      description: Which part of the installer you suppose are affected?
+      description: Which parts of the installer you suppose are affected?
       multiple: true
       options:
-        - "App (backend)"
-        - "GUI (frontend)"
+        - "Backend (app)"
+        - "Frontend (GUI)"
     validations:
       required: false
   - type: checkboxes
