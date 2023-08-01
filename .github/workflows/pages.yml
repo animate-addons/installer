@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths:
-      - /packages/ui/**
+      - packages/ui/**
   workflow_dispatch:
 
 permissions:
