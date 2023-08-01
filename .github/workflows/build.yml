@@ -1,0 +1,45 @@
+name: Build the App
+run-name: Building Application...
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "packages/app/**"
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [windows-latest]
+    runs-on: ${{matrix.os}}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Rust Toolchain
+        uses: dtolnay/rust-toolchain@stable
+      - name: Load Rust Cache
+        uses: Swatinem/rust-cache@v2
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: yarn
+      
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build
+        run: yarn app:build
+      
+      - name: Upload Windows artifact
+        if: runner.os == 'Windows'
+        uses: actions/upload-artifact@v3
+        with:
+          name: Animate-Addons-Installer-Windows
+          path:
+            packages/app/target/release/Animate-Addons-Installer.exe
