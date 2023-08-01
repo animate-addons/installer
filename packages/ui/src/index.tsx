@@ -1,10 +1,13 @@
 /* @refresh reload */
 import { render } from "solid-js/web"
-import { App } from "./App"
 import { appWindow, LogicalSize, PhysicalSize } from "@tauri-apps/api/window";
+import { InstallerApp } from "./installer/InstallerApp";
 
 
-render(() => <App />, document.getElementById("root")!);
+
+
+
+render(() => <InstallerApp />, document.getElementById("root")!);
 
 appWindow.setTitle("Animate Addons Installer");
 appWindow.center();

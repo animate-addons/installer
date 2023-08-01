@@ -10,5 +10,9 @@ export default defineConfig({
     emptyOutDir: true,
     outDir: "dist"
   },
+  envPrefix: [
+    "VITE_",
+    "TAURI_"
+  ],
   plugins: [solid()],
 })
