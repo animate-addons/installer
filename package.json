@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "name": "@animate-addons/installer",
+  "version": "0.0.0",
+  "description": "One application to find, download, install and manage Addons for Adobe Animate",
+  "author": "DeMineArchiver",
+  "homepage": "https://animate-addons.github.io/installer",
+  "repository": "https://github.com/animate-addons/installer",
+  "bugs": "https://github.com/animate-addons/installer/issues",
+  "license": "MIT",
+  "packageManager": "yarn@3.6.1",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "app": "yarn workspace @animate-addons-installer/app",
+    "ui": "yarn workspace @animate-addons-installer/ui",
+
+    "app:build": "yarn app tauri build",
+    "ui:build": "yarn ui build",
+    "ui:dev": "yarn ui dev"
+  }
+}
