@@ -1,0 +1,49 @@
+name: Deploy GitHub Pages
+run-name: Deploying to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - /packages/ui/**
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      # Clone
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # Set up environment
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: yarn
+      - name: Install dependencies
+        run: yarn install
+      
+      # Build
+      - name: Build
+        run: yarn run ui:build
+
+      # GitHub Pages
+      - name: Set up Pages
+        uses: actions/configure-pages@v3
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./packages/ui/dist
+      - name: Deploy to Pages
+        id: deploy
+        uses: actions/deploy-pages@v2

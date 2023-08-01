@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths:
-      - "packages/app/**"
+      - "/packages/app/**"
   workflow_dispatch:
 
 jobs:
@@ -16,30 +16,34 @@ jobs:
         os: [windows-latest]
     runs-on: ${{matrix.os}}
     steps:
+      # Clone
       - name: Checkout
         uses: actions/checkout@v3
 
+      # Set up Rust
       - name: Set up Rust Toolchain
         uses: dtolnay/rust-toolchain@stable
       - name: Load Rust Cache
         uses: Swatinem/rust-cache@v2
 
+      # Set up Node
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: yarn
-      
+          cache: yarn   
       - name: Install dependencies
         run: yarn install
 
+      # Build
       - name: Build
-        run: yarn app:build
+        run: yarn run app:build
       
+      # Upload artifacts
       - name: Upload Windows artifact
         if: runner.os == 'Windows'
         uses: actions/upload-artifact@v3
         with:
           name: Animate-Addons-Installer-Windows
           path:
-            packages/app/target/release/Animate-Addons-Installer.exe
+            ./packages/app/target/release/Animate-Addons-Installer.exe
