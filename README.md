@@ -3,12 +3,12 @@
 
 
 ## Table of contents
-- [**Getting Started**](https://github.com/animate-addons/installer#getting-started "animate-addons/installer#getting-started")
-  - [Prerequisites](https://github.com/animate-addons/installer#prerequisites "animate-addons/installer#prerequisites")
-  - [Installation](https://github.com/animate-addons/installer#installation "animate-addons/installer#installation")
-- [**Usage**](https://github.com/animate-addons/installer#usage "animate-addons/installer#usage")
-- [**Contributing**](https://github.com/animate-addons/installer#contributing "animate-addons/installer#license")
-- [**License**](https://github.com/animate-addons/installer#license "animate-addons/installer#license")
+- [**Getting Started**](#getting-started "animate-addons/installer#getting-started")
+  - [Prerequisites](#prerequisites "animate-addons/installer#prerequisites")
+  - [Installation](#installation "animate-addons/installer#installation")
+- [**Usage**](#usage "animate-addons/installer#usage")
+- [**Contributing**](r#contributing "animate-addons/installer#license")
+- [**License**](#license "animate-addons/installer#license")
 
 ## Getting started
 ### Prerequisites
