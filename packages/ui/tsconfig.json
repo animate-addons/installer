@@ -19,9 +19,15 @@
 
     /* Linting */
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+
+    "paths": {
+      "@api/fs": ["./src/lib/api/fs"],
+      "@api/registry": ["./src/lib/api/registry"]
+    }
   },
   "include": ["src", "vite.config.ts"],
 }
