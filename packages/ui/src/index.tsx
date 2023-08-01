@@ -4,13 +4,8 @@ import { appWindow, LogicalSize, PhysicalSize } from "@tauri-apps/api/window";
 import { InstallerApp } from "./installer/InstallerApp";
 
 
+if(window.__INSTALLER__?.active) {
+  render(() => <InstallerApp />, document.getElementById("root")!);
 
-
-
-render(() => <InstallerApp />, document.getElementById("root")!);
-
-appWindow.setTitle("Animate Addons Installer");
-appWindow.center();
-appWindow.setSize(new LogicalSize(800, 600));
-
-appWindow.show();
+  window.addEventListener("DOMContentLoaded", () => appWindow.show());
+} else window.location.replace("https://github.com/animate-addons/installer/");
