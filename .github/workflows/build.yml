@@ -25,6 +25,8 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
       - name: Load Rust Cache
         uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: ./packages/app -> target
 
       # Set up Node
       - name: Set up Node
