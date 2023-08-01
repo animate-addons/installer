@@ -1,12 +1,13 @@
 #![cfg_attr(all(not(debug_assertions), target_os = "windows"), windows_subsystem = "windows")]
 
-pub mod registry;
+mod api;
 
 fn main() {
   let context = tauri::generate_context!();
-
-  tauri::Builder::default()
-    .plugin(registry::plugin::init())
+  let builder = tauri::Builder::default()
+    .plugin(api::plugin::init())
+    .plugin(api::registry::init());
+  builder
     .run(context)
     .expect("Failed to start the installer!");
 }

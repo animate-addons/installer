@@ -15,6 +15,7 @@ tauri-build = { version = "1.4", features = [] }
 
 [dependencies]
 tauri = { version = "1.4", features = ["api-all"] }
+winreg = { version = "0.50" }
 
 [features]
 custom-protocol = ["tauri/custom-protocol"]
