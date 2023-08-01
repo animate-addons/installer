@@ -1,0 +1,20 @@
+[package]
+name = "animate-addons-installer"
+version = "0.0.1"
+description = "One application to find, download, install and manage Addons for Adobe Animate"
+authors = ["DeMineArchiver"]
+license = "MIT"
+homepage = "https://animate-addons.github.io/installer"
+repository = "https://github.com/animate-addons/installer"
+readme = "../../README.md"
+edition = "2021"
+build = "src/build.rs"
+
+[build-dependencies]
+tauri-build = { version = "1.4", features = [] }
+
+[dependencies]
+tauri = { version = "1.4", features = ["api-all"] }
+
+[features]
+custom-protocol = ["tauri/custom-protocol"]

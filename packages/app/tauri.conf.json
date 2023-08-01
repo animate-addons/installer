@@ -1,0 +1,42 @@
+{
+  "$schema": "../../node_modules/@tauri-apps/cli/schema.json",
+  "build": {
+    "beforeDevCommand": "cd ../.. && yarn ui dev",
+    "devPath": "http://localhost:5173/installer/",
+    "distDir": "https://animate-addons.github.io/installer/",
+    "withGlobalTauri": false
+  },
+  "package": {
+    "productName": "Animate-Addons-Installer"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": true
+    },
+    "bundle": {
+      "category": "Utility",
+      "copyright": "Copyright (c) DeMineArchiver 2023",
+      "active": false,
+      "icon": [
+        "icons/icon.png",
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "identifier": "org.animateaddons.installer"
+    },
+    "security": {
+      "csp": "default-src https://*.github.io/*"
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "label": "main",
+        "visible": false
+      }
+    ]
+  }
+}
