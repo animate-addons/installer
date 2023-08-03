@@ -1,9 +1,9 @@
-interface InstallerGlobal {
+interface Installer {
   active: boolean;
 } 
 declare global {
   interface Window {
-    __INSTALLER__: InstallerGlobal | undefined;
+    __INSTALLER__?: Installer;
   }
 }
 
