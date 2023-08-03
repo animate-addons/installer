@@ -3,6 +3,7 @@
   "build": {
     "beforeDevCommand": "cd ../.. && yarn ui dev",
     "devPath": "http://localhost:5173/installer/",
+    "distDir": "https://animate-addons.github.io/installer",
     "withGlobalTauri": false
   },
   "package": {
@@ -35,7 +36,6 @@
     "windows": [
       {
         "label": "main",
-        "url": "https://animate-addons.github.io/installer",
         "visible": false
       }
     ]
