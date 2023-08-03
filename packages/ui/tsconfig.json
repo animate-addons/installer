@@ -22,12 +22,7 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
-    "noImplicitOverride": true,
-
-    "paths": {
-      "@api/fs": ["./src/lib/api/fs"],
-      "@api/registry": ["./src/lib/api/registry"]
-    }
+    "noImplicitOverride": true
   },
   "include": ["src", "vite.config.ts"],
 }
