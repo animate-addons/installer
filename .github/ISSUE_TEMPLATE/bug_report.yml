@@ -1,0 +1,36 @@
+name: Bug Report
+description: File a Bug Report
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking your time to open an issue!
+  - type: textarea
+    id: describe
+    attributes:
+      label: Describe the Bug
+      description: Clear and concise description of what the bug is.
+      placeholder: |
+        <...> doesn't work!
+        <...> looks broken!
+        <...> behaves strangely!
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Clear list of steps we should take to reproduce the bug.
+      placeholder: |
+        1. Open the installer
+        2. Go there
+        3. Click here
+        4. Profit!
+  - type: input
+    id: os_version
+    attributes:
+      label: OS version
+      description: Your operating system's full version info (name, major, minor, build, etc.).
+      placeholder: e.g. Windows 22H2 build 22621.2070
+    validations:
+      required: true
