@@ -14,11 +14,12 @@
   ],
   "scripts": {
     "app": "yarn workspace @animate-addons-installer/app",
+    "preload": "yarn workspace @animate-addons-installer/preload",
     "ui": "yarn workspace @animate-addons-installer/ui",
-
     "app:dev": "yarn app tauri dev",
     "app:build": "yarn app tauri build",
-    "ui:build": "yarn ui build",
-    "ui:dev": "yarn ui dev"
+
+    "js:dev": "yarn ui dev && yarn preload build",
+    "js:build": "yarn ui build && yarn preload build"
   }
 }
