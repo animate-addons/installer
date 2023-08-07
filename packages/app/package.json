@@ -2,7 +2,6 @@
   "private": true,
   "name": "@animate-addons-installer/app",
   "version": "0.0.1",
-  "packageManager": "yarn@3.6.1",
   "scripts": {
     "dev": "yarn tauri dev",
     "build": "yarn tauri build"
