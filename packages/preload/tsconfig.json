@@ -1,7 +1,0 @@
-{
-  "compilerOptions": {
-    
-  },
-  "include": ["src", "vite.config.ts"],
-  "extends": ["../../tsconfig.web.json"]
-}
