@@ -1,5 +1,4 @@
 name: Deploy GitHub Pages
-run-name: Deploying to GitHub Pages
 
 on:
   push:
@@ -16,6 +15,7 @@ permissions:
 
 jobs:
   deploy:
+    name: Deploy
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}

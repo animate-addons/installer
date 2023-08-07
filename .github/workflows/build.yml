@@ -1,5 +1,4 @@
 name: Build the App
-run-name: Building Application...
 
 on:
   push:
@@ -11,7 +10,9 @@ on:
 
 jobs:
   build:
+    name: Build
     strategy:
+      fail-fast: false
       matrix:
         os: [windows-latest]
     runs-on: ${{matrix.os}}
