@@ -3,8 +3,8 @@
   "name": "@animate-addons-installer/app",
   "version": "0.0.1",
   "scripts": {
-    "dev": "yarn tauri dev",
-    "build": "yarn tauri build"
+    "dev": "tauri dev",
+    "build": "tauri build"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^1.4.0"

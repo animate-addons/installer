@@ -64,6 +64,7 @@ dependencies = [
  "serde_json",
  "tauri",
  "tauri-build",
+ "tauri-plugin-registry",
  "tauri-plugin-single-instance",
  "winreg 0.50.0",
 ]
@@ -3406,6 +3407,15 @@ dependencies = [
  "syn 1.0.109",
  "tauri-codegen",
  "tauri-utils",
+]
+
+[[package]]
+name = "tauri-plugin-registry"
+version = "0.0.0"
+dependencies = [
+ "serde",
+ "serde_json",
+ "tauri",
 ]
 
 [[package]]

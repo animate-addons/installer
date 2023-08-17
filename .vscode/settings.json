@@ -1,7 +1,4 @@
 {
-  "rust-analyzer.linkedProjects": [
-    "./packages/app/Cargo.toml"
-  ],
   "rust-analyzer.showUnlinkedFileNotification": false,
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"

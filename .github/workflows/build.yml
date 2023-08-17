@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - packages/app/**
+      - packages/tauri-plugin-*/**
   workflow_dispatch:
 
 jobs:
@@ -14,7 +15,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest]
+        os: [windows-latest, macos-latest]
     runs-on: ${{matrix.os}}
     steps:
       # Clone
@@ -26,8 +27,6 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
       - name: Load Rust Cache
         uses: Swatinem/rust-cache@v2
-        with:
-          workspaces: ./packages/app -> target
 
       # Set up Node
       - name: Set up Node
@@ -40,13 +39,20 @@ jobs:
 
       # Build
       - name: Build
-        run: yarn run app:build
+        run: yarn :app build
       
       # Upload artifacts
-      - name: Upload Windows artifact
+      - name: Upload artifact
         if: runner.os == 'Windows'
         uses: actions/upload-artifact@v3
         with:
-          name: Animate-Addons-Installer-Windows
+          name: installer-win
           path:
             ./packages/app/target/release/Animate-Addons-Installer.exe
+      - name: Upload artifacts
+        if: runner.os == 'macOS'
+        uses: actions/upload-artifact@v3
+        with:
+          name: installer-mac
+          path:
+            ./packages/app/target/release/

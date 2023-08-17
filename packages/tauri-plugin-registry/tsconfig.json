@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "Node",
+
+    "declaration": true,
+    "declarationDir": "./dist"
+  },
+  "include": ["api", "vite.config.ts"],
+  "extends": ["../../tsconfig.web.json"]
+}

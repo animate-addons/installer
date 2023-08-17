@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - packages/ui/**
+      - packages/tauri-plugin-*/**
   workflow_dispatch:
 
 permissions:
@@ -36,7 +37,7 @@ jobs:
       
       # Build
       - name: Build
-        run: yarn run ui:build
+        run: yarn :ui build
 
       # GitHub Pages
       - name: Set up Pages
