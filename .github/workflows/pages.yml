@@ -32,11 +32,13 @@ jobs:
         with:
           node-version: 18
           cache: yarn
+
+      - name: test1
+        run: yarn dlx -q envinfo --preset jest
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache --check-cache
       
-      - name: test1
-        run: yarn dlx -q envinfo --preset jest
+
 
       # Build
       - name: Build
