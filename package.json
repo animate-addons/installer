@@ -16,6 +16,7 @@
     ":app": "yarn workspace @animate-addons-installer/app",
     ":ui": "yarn workspace @animate-addons-installer/ui",
     ":registry": "yarn workspace tauri-plugin-registry",
-    "dev": "yarn :app tauri dev"
+    "dev": "yarn :app tauri dev",
+    "build": "yarn :registry build && yarn :ui build"
   }
 }
