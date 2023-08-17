@@ -35,6 +35,9 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache --check-cache
       
+      - name: test1
+        run: yarn dlx -q envinfo --preset jest
+
       # Build
       - name: Build
         run: yarn :ui build
