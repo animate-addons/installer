@@ -15,7 +15,7 @@
   "devDependencies": {
     "@tauri-apps/api": "^1.4.0",
     "@types/node": "^20.4.8",
-    "tauri-plugin-registry": "workspace:^",
+    "tauri-plugin-registry": "workspace:*",
     "typescript": "^5.0.2",
     "vite": "^4.4.9",
     "vite-plugin-solid": "^2.7.0"
