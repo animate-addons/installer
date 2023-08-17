@@ -1,6 +1,6 @@
 [package]
 name = "animate-addons-installer"
-version = "0.0.1"
+version = "0.0.0"
 description = "One application to find, download, install and manage Addons for Adobe Animate"
 readme = "../../README.md"
 authors.workspace = true

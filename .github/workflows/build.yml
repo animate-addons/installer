@@ -18,38 +18,36 @@ jobs:
         os: [windows-latest, macos-latest]
     runs-on: ${{matrix.os}}
     steps:
-      # Clone
       - name: Checkout
         uses: actions/checkout@v3
 
-      # Set up Rust
       - name: Set up Rust Toolchain
         uses: dtolnay/rust-toolchain@stable
-      - name: Load Rust Cache
+
+      - name: Set up Rust Cache
         uses: Swatinem/rust-cache@v2
 
-      # Set up Node
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: yarn   
+          cache: yarn
+      
       - name: Install dependencies
         run: yarn install
 
-      # Build
       - name: Build
         run: yarn :app build
       
-      # Upload artifacts
-      - name: Upload artifact
+      - name: Upload artifacts (Windows)
         if: runner.os == 'Windows'
         uses: actions/upload-artifact@v3
         with:
           name: installer-win
           path:
             ./packages/app/target/release/Animate-Addons-Installer.exe
-      - name: Upload artifacts
+      
+      - name: Upload artifacts (macOS)
         if: runner.os == 'macOS'
         uses: actions/upload-artifact@v3
         with:

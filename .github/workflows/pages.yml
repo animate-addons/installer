@@ -38,7 +38,7 @@ jobs:
       
       # Build
       - name: Build
-        run: yarn build
+        run: yarn ci:build-pages
 
       # GitHub Pages
       - name: Set up Pages

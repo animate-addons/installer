@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@animate-addons-installer/app",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "scripts": {
     "dev": "tauri dev",
     "build": "tauri build"
