@@ -1,9 +1,11 @@
 use cfg_if::cfg_if;
-use tauri::{Runtime, plugin::{Builder, TauriPlugin}, generate_handler};
+use tauri::{Runtime, plugin::{Builder, TauriPlugin}};
 
 
 cfg_if! {
   if #[cfg(target_os = "windows")] {
+    use tauri::generate_handler;
+
     mod handler;
     mod registry;
     

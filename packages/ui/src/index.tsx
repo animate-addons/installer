@@ -12,4 +12,3 @@ if(window.__INSTALLER__?.active) {
 
   window.addEventListener("DOMContentLoaded", () => appWindow.show());
 } else window.location.replace("https://github.com/animate-addons/installer/");
-console.log(import.meta.env);

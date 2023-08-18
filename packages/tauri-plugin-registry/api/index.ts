@@ -1,2 +1,2 @@
 export { RegistryNode } from "./registry";
-export { isSupported } from "./invoke";
+export { isSupported } from "./util";
