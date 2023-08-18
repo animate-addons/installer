@@ -15,9 +15,11 @@ tauri-build = { workspace = true, features = [] }
 [dependencies]
 tauri = { workspace = true, features = ["api-all"] }
 tauri-plugin-single-instance = { git = "https://github.com/tauri-apps/plugins-workspace", branch = "v1" }
-tauri-plugin-registry = { path = "../tauri-plugin-registry" }
 serde = { workspace = true, features = ["derive"] }
 serde_json.workspace = true
+
+[target.'cfg(windows)'.dependencies]
+tauri-plugin-registry = { path = "../tauri-plugin-registry" }
 
 [features]
 custom-protocol = ["tauri/custom-protocol"]
