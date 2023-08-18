@@ -45,7 +45,7 @@ jobs:
         with:
           name: installer-win
           path:
-            ./packages/app/target/release/Animate-Addons-Installer.exe
+            ./target/release/Animate-Addons-Installer.exe
       
       - name: Upload artifacts (macOS)
         if: runner.os == 'macOS'
@@ -53,4 +53,4 @@ jobs:
         with:
           name: installer-mac
           path:
-            ./packages/app/target/release/
+            ./target/release/
