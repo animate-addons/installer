@@ -1,29 +1,16 @@
 {
 	"version": "2.0.0",
 	"tasks": [
-		{
-			"label": "yarn app:build",
-			"detail": "Build the Tauri app",
-			"type": "npm",
-			"script": "app:build",
-			"problemMatcher": [],
-			"group": {
-				"kind": "build",
-				"isDefault": true
-			}
-		},
     {
-      "label": "yarn ui:dev",
-      "detail": "Start the UI dev server",
+      "label": "build-plugins",
+      "detail": "Build Tauri plugins",
       "type": "npm",
-      "script": "ui:dev",
-      "problemMatcher": []
-    },
-    {
-      "label": "Test CLI",
-      "detail": "Runs a test CLI command",
-      "type": "shell",
-      "command": "./packages/app/target/release/Animate-Addons-Installer.exe --help"
+      "script": "plugins-build",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     }
-	]
+  ]
 }
