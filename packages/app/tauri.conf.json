@@ -1,7 +1,7 @@
 {
   "$schema": "../../node_modules/@tauri-apps/cli/schema.json",
   "build": {
-    "beforeDevCommand": "cd ../.. && yarn :ui dev",
+    "beforeDevCommand": "cd ../.. && yarn ui:dev",
     "devPath": "http://localhost:5173/installer/",
     "distDir": "https://animate-addons.github.io/installer/",
     "withGlobalTauri": false

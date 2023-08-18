@@ -18,6 +18,7 @@
     ":registry": "yarn workspace tauri-plugin-registry",
     "dev": "yarn :app tauri dev",
     "plugins-build": "yarn :registry build",
+    "ui:dev": "yarn plugins-build && yarn :ui dev",
     "ci:build-app": "yarn :app build",
     "ci:build-pages": "yarn plugins-build && yarn :ui build"
   }
