@@ -13,12 +13,10 @@ edition.workspace = true
 tauri-build = { workspace = true, features = [] }
 
 [dependencies]
-tauri = { workspace = true, features = ["api-all"] }
+tauri = { workspace = true, features = ["api-all", "window-data-url"] }
 tauri-plugin-single-instance = { git = "https://github.com/tauri-apps/plugins-workspace", branch = "v1" }
 serde = { workspace = true, features = ["derive"] }
 serde_json.workspace = true
-
-[target.'cfg(windows)'.dependencies]
 tauri-plugin-registry = { path = "../tauri-plugin-registry" }
 
 [features]

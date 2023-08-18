@@ -9,6 +9,7 @@ fn main() {
   let builder = tauri::Builder::default()
     .plugin(app::init())
     .plugin(tauri_plugin_registry::init());
+  
   builder
     .run(context)
     .expect("Failed to start the installer!");

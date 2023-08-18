@@ -11,8 +11,8 @@ export interface IRegistryNode {
 export class RegistryNode {
   
   
-  public static async open(path: string): Promise<RegistryNode> {
-    const data = await invoke.open(path);
+  public static async open(path: string, depth?: number): Promise<RegistryNode> {
+    const data = await invoke.open(path, depth);
     return new RegistryNode(path, data);
   }
 

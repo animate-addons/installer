@@ -1,5 +1,4 @@
 import { defineConfig } from "vite";
-import dts from "vite-plugin-dts";
 
 export default defineConfig({
   build: {
@@ -8,18 +7,12 @@ export default defineConfig({
     lib: {
       entry: "./api/index.ts",
       fileName: "index",
-      formats: ["cjs", "es"]
+      formats: ["es"]
     },
     rollupOptions: {
       external: [
         "@tauri-apps/api"
       ]
     }
-  },
-  plugins: [
-    dts({
-      insertTypesEntry: true,
-      exclude: "vite.config.ts"
-    })
-  ]
+  }
 });

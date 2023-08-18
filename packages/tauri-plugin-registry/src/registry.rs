@@ -25,7 +25,7 @@ pub struct RegistryNode {
 }
 
 impl RegistryNode {
-  pub fn open(path: PathBuf) -> Result<Self, ()> {
+  pub fn open(path: PathBuf, depth: Option<u32>) -> Result<Self, ()> {
     let path: PathBuf = path.components().into_iter().collect();
 
     let mut parts = path.components().collect::<Vec<_>>();
@@ -80,7 +80,12 @@ impl RegistryNode {
         for child_key in sub_key.enum_keys() {
           let Ok(child_name) = child_key else { continue };
           let child_path = path.join(child_name.as_str());
-          match RegistryNode::open(child_path) {
+          if let Some(depth) = depth {
+            if depth <= 0 {
+              break;
+            }
+          }
+          match RegistryNode::open(child_path, if let Some(depth) = depth { Some(depth - 1) } else { None }) {
             Ok(child) => node.children.insert(child_name, child),
             Err(_) => continue
           };

@@ -679,6 +679,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "data-url"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8d7439c3735f405729d52c3fbbe4de140eaf938a1fe47d227c27f8254d4302a5"
+
+[[package]]
 name = "deranged"
 version = "0.3.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3320,6 +3326,7 @@ dependencies = [
  "anyhow",
  "bytes",
  "cocoa",
+ "data-url",
  "dirs-next",
  "embed_plist",
  "encoding_rs",
@@ -3427,6 +3434,7 @@ dependencies = [
 name = "tauri-plugin-registry"
 version = "0.0.0"
 dependencies = [
+ "cfg-if",
  "serde",
  "serde_json",
  "tauri",

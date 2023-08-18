@@ -6,8 +6,8 @@ export const App: Component = () => {
 
   return (
     <>
-      <button onClick={() => RegistryNode.open("HKEY_LOCAL_MACHINE/SOFTWARE/Adobe").then(setTree)}>Click</button>
-      <p>{JSON.stringify(tree(), null, 2)}</p>
+      <button onClick={() => RegistryNode.open("HKEY_LOCAL_MACHINE/SOFTWARE/Microsoft/Windows/CurrentVersion/Run", 2).then(setTree)}>Click</button>
+      <pre>{JSON.stringify(tree(), null, 2)}</pre>
     </>
   )
 }

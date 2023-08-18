@@ -4,8 +4,8 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "yarn vite",
-    "build": "yarn tsc && yarn vite build"
+    "dev": "vite",
+    "build": "vite build"
   },
   "dependencies": {
     "@solid-primitives/event-listener": "^2.2.13",

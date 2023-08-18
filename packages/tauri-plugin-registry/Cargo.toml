@@ -12,6 +12,7 @@ edition.workspace = true
 tauri.workspace = true
 serde = { workspace = true, features = ["derive"] }
 serde_json.workspace = true
+cfg-if.workspace = true
 
 [target.'cfg(windows)'.dependencies]
 winreg.workspace = true
